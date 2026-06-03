@@ -1,3 +1,10 @@
 {
-    "python.REPL.enableREPLSmartSend": false
+    "python.REPL.enableREPLSmartSend": false,
+    "python-envs.pythonProjects": [
+        {
+            "path": "EVALUACION_CONTINUA_1/ejercicio1.py",
+            "envManager": "ms-python.python:system",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
 }
