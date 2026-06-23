@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Aroma y Tentación | Regalos Personalizados - Vinos y Piscos Premium en Lima</title>
+  <meta name="description" content="Regalos personalizados con vinos y piscos premium en Lima. Envíos a domicilio, cajas sorpresa, peluches, flores y más. ¡Cotiza tu regalo ideal!">
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--mahogany:#9D2424;--rosewood:#C45959;--canyon:#E88686;--antique:#E39C9C}
+    body{font-family:'Poppins',sans-serif;background:linear-gradient(145deg,#FFF9F2,#FFF3EA);color:#1E1E1E;line-height:1.5;overflow-x:hidden}
+    h1,h2,.hero-title,.section-title{font-family:'Agbalumo',cursive;letter-spacing:.02em}
+    .container{width:92%;max-width:1400px;margin:0 auto;padding:0 1rem}
+    @media(min-width:768px){.container{width:90%;padding:0 2rem}}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--mahogany);color:#fff;padding:12px 28px;border-radius:50px;font-weight:600;font-size:clamp(.85rem,1.2vw,1rem);transition:.3s;text-decoration:none;box-shadow:0 8px 20px rgba(157,36,36,.3);border:none;cursor:pointer}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(157,36,36,.4)}
+    .btn-outline{background:transparent;border:2px solid var(--mahogany);color:var(--mahogany);padding:10px 26px;border-radius:50px;font-weight:600;text-decoration:none;transition:.3s;display:inline-flex;align-items:center;gap:8px}
+    .btn-outline:hover{background:var(--mahogany);color:#fff;transform:translateY(-2px)}
+    header{background:rgba(255,247,239,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(157,36,36,.15);position:sticky;top:0;z-index:1000}
+    .navbar{display:flex;flex-direction:column;align-items:center;padding:.8rem 0;gap:.8rem}
+    @media(min-width:992px){.navbar{flex-direction:row;justify-content:space-between;padding:1rem 0}}
+    .logo-area{display:flex;align-items:center;gap:12px;text-decoration:none;width:100%;justify-content:center}
+    @media(min-width:992px){.logo-area{width:auto;justify-content:flex-start}}
+    .logo-area img{height:45px;width:auto;object-fit:contain}
+    @media(min-width:768px){.logo-area img{height:55px}}
+    .logo-text h1{font-size:clamp(1.2rem,3.5vw,2rem);color:var(--mahogany)}
+    .logo-text p{font-size:clamp(.55rem,1.2vw,.75rem);letter-spacing:2px;font-weight:500;color:#7a3a3a}
+    .contact-info{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.2rem;background:rgba(255,245,235,.9);padding:.5rem 1rem;border-radius:60px;width:100%}
+    @media(min-width:992px){.contact-info{width:auto;padding:.5rem 1.5rem}}
+    .contact-item{display:flex;align-items:center;gap:6px;font-weight:600;font-size:clamp(.7rem,1.2vw,.9rem);white-space:nowrap}
+    .contact-item i{color:var(--mahogany)}
+    .nav-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.2rem;list-style:none;width:100%;padding:.3rem 0}
+    @media(min-width:992px){.nav-links{width:auto;gap:1.8rem;padding:0}}
+    .nav-links a{text-decoration:none;font-weight:600;color:#101010;transition:.3s;font-size:clamp(.85rem,1.2vw,1rem);position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2.5px;background:var(--mahogany);transition:.3s;border-radius:2px}
+    .nav-links a:hover::after{width:100%}
+    .nav-links a:hover{color:var(--mahogany)}
+    .hero{padding:clamp(2.5rem,6vw,5rem) 0;background:radial-gradient(circle at 10% 30%,rgba(232,134,134,.08),rgba(255,247,239,.95));position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+    @media(min-width:768px){.hero-grid{grid-template-columns:1fr 1fr;gap:3rem}}
+    .hero-content{text-align:center;order:2}
+    @media(min-width:768px){.hero-content{text-align:left;order:1}}
+    .hero-title{font-size:clamp(2rem,5vw,3.8rem);line-height:1.15;margin-bottom:.8rem;color:var(--mahogany)}
+    .hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);font-weight:500;color:#4a2a2a}
+    .hero-description{font-size:clamp(.9rem,1.5vw,1.1rem);color:#5a3a3a;max-width:500px;margin:.5rem auto 1.5rem}
+    @media(min-width:768px){.hero-description{margin:.5rem 0 1.5rem}}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+    @media(min-width:768px){.hero-buttons{justify-content:flex-start}}
+    .hero-image{border-radius:2rem;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,.12);transition:.4s;order:1}
+    @media(min-width:768px){.hero-image{order:2}}
+    .hero-image img{width:100%;height:auto;display:block;transition:transform .6s;aspect-ratio:16/10;object-fit:cover}
+    .hero-image:hover img{transform:scale(1.03)}
+    .section-title{font-size:clamp(1.8rem,4vw,3rem);text-align:center;margin:2.5rem 0 1.5rem;color:var(--mahogany);position:relative;display:inline-block;width:100%}
+    .section-title::after{content:'';display:block;width:70px;height:3px;background:var(--canyon);margin:10px auto 0;border-radius:4px}
+    .categories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.2rem;margin:2rem 0}
+    @media(min-width:768px){.categories-grid{gap:1.8rem}}
+    .cat-card{background:rgba(255,255,255,.9);backdrop-filter:blur(2px);border-radius:1.5rem;padding:1.5rem .8rem;text-align:center;transition:.4s;border:1px solid rgba(227,156,156,.25);box-shadow:0 4px 12px rgba(0,0,0,.04)}
+    .cat-card:hover{transform:translateY(-8px) scale(1.02);border-color:var(--canyon);box-shadow:0 15px 35px rgba(0,0,0,.08);background:#fff}
+    .cat-card i{font-size:2.2rem;color:var(--rosewood);margin-bottom:.8rem;display:block}
+    .cat-card h4{font-size:clamp(.95rem,1.2vw,1.1rem);color:var(--mahogany)}
+    .cat-card p{font-size:clamp(.8rem,.9vw,.9rem);color:#666}
+    .featured-products{display:grid;grid-template-columns:1fr;gap:1.5rem;margin:2rem 0}
+    @media(min-width:480px){.featured-products{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:992px){.featured-products{grid-template-columns:repeat(3,1fr);gap:2rem}}
+    .product-card{background:#fff;border-radius:1.5rem;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.05);transition:.4s;border:1px solid rgba(227,156,156,.15);display:flex;flex-direction:column}
+    .product-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.12);border-color:var(--canyon)}
+    .product-img{height:200px;overflow:hidden;flex-shrink:0;background:#f8f0ea}
+    @media(min-width:768px){.product-img{height:220px}}
+    .product-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .product-card:hover .product-img img{transform:scale(1.05)}
+    .product-info{padding:1.2rem 1.2rem 1.5rem;text-align:center;flex:1;display:flex;flex-direction:column;align-items:center}
+    .product-info h3{font-size:clamp(1.1rem,1.3vw,1.3rem);color:var(--mahogany);margin-bottom:.4rem}
+    .product-info p{font-size:clamp(.85rem,.9vw,.95rem);color:#555;flex:1;margin-bottom:1rem;max-width:100%}
+    .product-info .btn-primary{min-height:44px;min-width:140px;padding:10px 28px;font-size:clamp(.8rem,.9vw,.9rem);align-self:center;width:auto;margin:0 auto}
+    .event-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin:1.5rem 0}
+    .event-item{background:rgba(255,245,239,.85);border-radius:60px;padding:.6rem 1.2rem;font-weight:600;font-size:clamp(.8rem,1vw,.95rem);transition:.3s;border:1px solid rgba(227,156,156,.2)}
+    .event-item:hover{background:var(--antique);color:#fff;transform:scale(1.05);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;margin:2rem 0}
+    @media(min-width:768px){.features-grid{gap:1.8rem}}
+    .feature-card{background:rgba(255,255,255,.9);border-radius:1.5rem;padding:1.8rem .8rem;text-align:center;transition:.4s;border:1px solid rgba(227,156,156,.2);box-shadow:0 4px 12px rgba(0,0,0,.04)}
+    .feature-card:hover{transform:translateY(-8px);border-color:var(--canyon);box-shadow:0 15px 35px rgba(0,0,0,.08);background:#fff}
+    .feature-card i{font-size:2.5rem;color:var(--rosewood);margin-bottom:.8rem;display:block}
+    .feature-card h4{font-size:clamp(1rem,1.1vw,1.1rem);color:var(--mahogany)}
+    .feature-card p{font-size:clamp(.8rem,.9vw,.9rem);color:#666}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin:2rem 0}
+    @media(min-width:480px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:1rem}}
+    @media(min-width:768px){.gallery-grid{grid-template-columns:repeat(4,1fr);gap:1.5rem}}
+    .gallery-item{overflow:hidden;border-radius:1rem;box-shadow:0 4px 12px rgba(0,0,0,.05);transition:.4s;aspect-ratio:1/1;background:#f0e8e0}
+    .gallery-item:hover{transform:translateY(-6px);box-shadow:0 15px 30px rgba(0,0,0,.12)}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+    .gallery-item:hover img{transform:scale(1.08)}
+    .testimonials-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;margin:2rem 0}
+    @media(min-width:480px){.testimonials-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:992px){.testimonials-grid{grid-template-columns:repeat(3,1fr);gap:1.8rem}}
+    .testi-card{background:#fff;border-radius:1.5rem;padding:1.5rem;box-shadow:0 4px 12px rgba(0,0,0,.04);border:1px solid rgba(227,156,156,.15);transition:.4s}
+    .testi-card:hover{box-shadow:0 10px 25px rgba(0,0,0,.08);transform:translateY(-4px)}
+    .testi-card i{color:var(--canyon);font-size:1.6rem;margin-bottom:.8rem;display:inline-block}
+    .testi-card p{color:#2c2c2c;font-weight:500;font-size:clamp(.9rem,1vw,1rem);margin-bottom:.5rem}
+    .testi-card h5{color:var(--mahogany);font-size:clamp(.85rem,.9vw,.95rem)}
+    .contact-premium{background:rgba(255,249,242,.9);backdrop-filter:blur(5px);border-radius:2rem;padding:clamp(1.8rem,4vw,3.5rem);text-align:center;margin:3rem 0;border:1px solid rgba(227,156,156,.3);box-shadow:0 10px 25px rgba(0,0,0,.04)}
+    .contact-premium h2{font-family:'Agbalumo',cursive;font-size:clamp(1.6rem,4vw,2.3rem);color:var(--mahogany)}
+    .big-phone{font-size:clamp(1.2rem,3vw,2rem);font-weight:700;background:var(--mahogany);color:#fff;display:inline-flex;align-items:center;gap:12px;padding:.6rem 1.8rem;border-radius:60px;margin:.8rem 0;flex-wrap:wrap;justify-content:center}
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:2rem;text-align:left}
+    @media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr}}
+    .form-group{margin-bottom:1rem}
+    .form-group input,.form-group textarea{width:100%;padding:12px 18px;border-radius:50px;border:2px solid #e0cfc4;background:#fff;font-family:inherit;transition:.3s;font-size:1rem}
+    .form-group textarea{border-radius:1rem;resize:vertical;min-height:100px}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--mahogany);box-shadow:0 0 0 4px rgba(157,36,36,.08)}
+    .contact-map iframe{width:100%;height:200px;border-radius:1rem;border:none;box-shadow:0 4px 12px rgba(0,0,0,.04)}
+    @media(min-width:768px){.contact-map iframe{height:250px}}
+    .social-icons{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin:1.5rem 0}
+    .social-icons a{background:#fff;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:60px;font-size:24px;color:var(--mahogany);transition:.3s;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.04);border:1px solid rgba(227,156,156,.15)}
+    .social-icons a:hover{background:var(--mahogany);color:#fff;transform:translateY(-6px) rotate(3deg);box-shadow:0 10px 25px rgba(0,0,0,.1)}
+    .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;padding:.7rem 1.2rem;border-radius:50px;display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:600;z-index:999;box-shadow:0 8px 30px rgba(37,211,102,.35);transition:.3s;font-size:clamp(.8rem,1vw,.95rem)}
+    .whatsapp-float:hover{transform:scale(1.05);background:#128C7E}
+    .whatsapp-float i{font-size:clamp(1.5rem,2vw,2rem)}
+    @media(max-width:400px){.whatsapp-float span{display:none}.whatsapp-float{padding:.8rem;border-radius:50%;bottom:15px;right:15px}.whatsapp-float i{font-size:1.8rem;margin:0}}
+    footer{border-top:2px solid #EFE0D7;padding:2rem 1rem;text-align:center;font-size:.85rem;background:rgba(255,247,239,.7);margin-top:2rem}
+    .footer-details{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem 2rem;margin:1rem 0}
+    @media(max-width:480px){.footer-details{flex-direction:column;gap:.5rem}}
+    .text-center{text-align:center}
+  </style>
+</head>
+<body>
+
+<a href="https://wa.me/51973696566?text=Hola%20Aroma%20y%20Tentación,%20quiero%20un%20regalo%20personalizado" class="whatsapp-float" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>¡Escríbenos!</span></a>
+
+<header>
+  <div class="container">
+    <div class="navbar">
+      <a href="#" class="logo-area">
+        <img src="https://lh3.googleusercontent.com/d/1GoPJ8WgNyAs43DhCiTMQeJ1w977mKuWH" alt="Logo Aroma y Tentación" style="height:55px;width:auto;object-fit:contain">
+        <div class="logo-text"><h1>Aroma y Tentación</h1><p>✨ ESPECIALISTAS EN REGALOS PERSONALIZADOS ✨</p></div>
+      </a>
+      <div class="contact-info">
+        <span class="contact-item"><i class="fas fa-phone-alt"></i><span>973 696 566</span></span>
+        <span class="contact-item"><i class="fas fa-truck"></i><span>Envíos a todo Lima - Perú</span></span>
+        <span class="contact-item"><i class="far fa-clock"></i><span>Lun-Sáb: 09 am - 08 pm</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#destacados">Destacados</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content" data-aos="fade-right">
+        <h1 class="hero-title">Convierte un momento en algo inolvidable.</h1>
+        <p class="hero-subtitle">Vinos, piscos y regalos personalizados para todos los gustos.</p>
+        <p class="hero-description">Encuentra el regalo perfecto para sorprender, celebrar y compartir.</p>
+        <div class="hero-buttons">
+          <a href="#destacados" class="btn-primary"><i class="fas fa-gift"></i> Ver lo más vendidos</a>
+          <a href="https://wa.me/51973696566" class="btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <img src="https://lh3.googleusercontent.com/d/1YB3c_W7d1dnvcqrhlgr1DfmHJyRKDh8W" alt="Selección Premium Vinos y Regalos - Aroma y Tentación">
+      </div>
+    </div>
+  </section>
+
+  <div class="container" id="productos">
+    <h2 class="section-title" data-aos="fade-up">Nuestros productos</h2>
+    <div class="categories-grid">
+      <div class="cat-card" data-aos="zoom-in"><i class="fas fa-wine-bottle"></i><h4>Vinos</h4><p>Desde S/39.90</p></div>
+      <div class="cat-card" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-wine-glass-alt"></i><h4>Piscos</h4><p>Premium</p></div>
+      <div class="cat-card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-box-open"></i><h4>Regalos Personalizados</h4><p>100% únicos</p></div>
+      <div class="cat-card" data-aos="zoom-in" data-aos-delay="150"><i class="fas fa-gift"></i><h4>Cajas de Regalo</h4><p>Desde S/49.90</p></div>
+      <div class="cat-card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-candy-cane"></i><h4>Chocolates</h4><p>Ferrero Rocher</p></div>
+      <div class="cat-card" data-aos="zoom-in" data-aos-delay="250"><i class="fas fa-heart"></i><h4>Peluches</h4><p>Personalizados</p></div>
+      <div class="cat-card" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-seedling"></i><h4>Flores</h4><p>Bellas</p></div>
+      <div class="cat-card" data-aos="zoom-in" data-aos-delay="350"><i class="fas fa-envelope-open-text"></i><h4>Tarjetas</h4><p>Dedicadas</p></div>
+    </div>
+  </div>
+
+  <div class="container" id="destacados">
+    <h2 class="section-title" data-aos="fade-up">🔥 Lo más vendidos</h2>
+    <div class="featured-products">
+      <div class="product-card" data-aos="fade-up">
+        <div class="product-img"><img src="https://lh3.googleusercontent.com/d/1XfLxDzEJEbTJFVT3ClplHePVkAbkLmJF" alt="Box hincha Universitario"></div>
+        <div class="product-info">
+          <h3>Box hincha Universitario</h3>
+          <p>Colección de pisco personalizado de la U, ideal para ese hincha especial.</p>
+          <a href="https://wa.me/51973696566?text=Hola!%20Me%20interesa%20el%20Box%20hincha%20Universitario" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-img"><img src="https://lh3.googleusercontent.com/d/19Vj-UcUnZ88DekiZueIwFWMKw9T8xROj" alt="Box tocador"></div>
+        <div class="product-info">
+          <h3>Box tocador</h3>
+          <p>Lleno de amor, ideal para un regalo especial que ella nunca olvidará.</p>
+          <a href="https://wa.me/51973696566?text=Hola!%20Me%20interesa%20el%20Box%20tocador" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+        </div>
+      </div>
+      <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-img"><img src="https://lh3.googleusercontent.com/d/1JoHo7vzp9XYfLIIuvl4LNlhAws73ipm7" alt="Canasta navideña"></div>
+        <div class="product-info">
+          <h3>Canasta navideña</h3>
+          <p>Esta Navidad regala magia — una canasta llena de sabores especiales.</p>
+          <a href="https://wa.me/51973696566?text=Hola!%20Me%20interesa%20la%20Canasta%20navide%C3%B1a" class="btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Consultar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="eventos">
+    <h2 class="section-title" data-aos="fade-up">Regalos para cada evento</h2>
+    <div class="event-grid">
+      <span class="event-item" data-aos="flip-up">Aniversarios 💝</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="40">Cumpleaños 🎂</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="80">Graduaciones 🎓</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="120">Día de la Madre 🌷</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="160">Día del Padre 👔</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="200">Navidad 🎄</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="240">Regalos Corporativos 🏢</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="280">Temáticas Personalizadas 🎨</span>
+      <span class="event-item" data-aos="flip-up" data-aos-delay="320">Eventos Especiales 💍</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">¿Por qué Aroma y Tentación?</h2>
+    <div class="features-grid">
+      <div class="feature-card" data-aos="fade-right"><i class="fas fa-gem"></i><h4>Diseños exclusivos</h4><p>Personalización única</p></div>
+      <div class="feature-card" data-aos="fade-right" data-aos-delay="50"><i class="fas fa-headset"></i><h4>Atención personalizada</h4><p>Te atendemos rápido</p></div>
+      <div class="feature-card" data-aos="fade-right" data-aos-delay="100"><i class="fas fa-truck-fast"></i><h4>Envíos a Lima</h4><p>Entregas express</p></div>
+      <div class="feature-card" data-aos="fade-right" data-aos-delay="150"><i class="fas fa-heart"></i><h4>Experiencias memorables</h4><p>Emociones garantizadas</p></div>
+    </div>
+  </div>
+
+  <div class="container" id="galeria">
+    <h2 class="section-title" data-aos="fade-up">Galería 🖼️</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-aos="zoom-in"><img src="https://lh3.googleusercontent.com/d/1ygY6mx1MuVGqHQSyOzm5olyug-lHCS11" alt="Galería 1"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="50"><img src="https://lh3.googleusercontent.com/d/1eNRDn_r-S1rEqRkDYpD6Ge46pySmtpQ1" alt="Galería 2"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100"><img src="https://lh3.googleusercontent.com/d/1mZ8q2xYobYf0Ru7G5jaLuJEuHzvW6S6B" alt="Galería 3"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150"><img src="https://lh3.googleusercontent.com/d/1EC9STiNJqOstSL9mBkQBbJgsiJ9b2yON" alt="Galería 4"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200"><img src="https://lh3.googleusercontent.com/d/14qKH4nzZH6_E-l8HNFqY6Fp9Ghbz-6lD" alt="Galería 5"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250"><img src="https://lh3.googleusercontent.com/d/19MN4ca-69RMU92wA6kEE4Mho8gfxzuJO" alt="Galería 6"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300"><img src="https://lh3.googleusercontent.com/d/1n-Gd9o_ibhJKSSOD8CECOkazK-BLh4Wy" alt="Galería 7"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350"><img src="https://lh3.googleusercontent.com/d/1Efxy3ZaQWek3rpcN25C5drS8u5OR5lmJ" alt="Galería 8"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400"><img src="https://lh3.googleusercontent.com/d/1FWmtyBAidKG0qb4dS8gtRYcD1fEfqqML" alt="Galería 9"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450"><img src="https://lh3.googleusercontent.com/d/1TPq5Qf7hex_NKCY1PJaLg9S_mj2TCzKX" alt="Galería 10"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500"><img src="https://lh3.googleusercontent.com/d/1Cixb8pqOYwhDtkDB4ZMnR4jhCBKh04Um" alt="Galería 11"></div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="550"><img src="https://lh3.googleusercontent.com/d/1UqsjqyUyINI02rkV0vdIt358iQwSGVRq" alt="Galería 12"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Sobre nosotros</h2>
+    <p class="text-center" style="max-width:800px;margin:0 auto 2rem;font-size:clamp(1rem,2vw,1.1rem)" data-aos="fade-up">En <strong>Aroma y Tentación</strong> somos especialistas en transformar cualquier ocasión en un recuerdo eterno. Creamos regalos personalizados con vinos, piscos y detalles únicos. <em>"Brinda, celebra y brinda emociones"</em> — porque cada presente debe contar una historia de amor, amistad o gratitud.</p>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Testimonios</h2>
+    <div class="testimonials-grid">
+      <div class="testi-card" data-aos="fade-up"><i class="fas fa-quote-left"></i><p>"El mejor detalle para mi esposa, súper personalizado."</p><h5>— Claudia R.</h5></div>
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="60"><i class="fas fa-quote-left"></i><p>"Pedí una caja de vino con tarjeta grabada, llegó en perfectas condiciones."</p><h5>— Javier M.</h5></div>
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="120"><i class="fas fa-quote-left"></i><p>"Atención de lujo y productos de primera. 100% recomendados."</p><h5>— Mariana L.</h5></div>
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="180"><i class="fas fa-quote-left"></i><p>"El ramo de flores junto con el vino personalizado fue un éxito total."</p><h5>— Fabiola S.</h5></div>
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="240"><i class="fas fa-quote-left"></i><p>"Hice un pedido para un aniversario sorpresa y quedaron fascinados."</p><h5>— Renato P.</h5></div>
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-quote-left"></i><p>"Excelente atención personalizada, me ayudaron a elegir el regalo ideal."</p><h5>— Valeria C.</h5></div>
+    </div>
+  </div>
+
+  <div class="container" id="contacto">
+    <div class="contact-premium" data-aos="flip-up">
+      <h2>Cuéntanos tu idea</h2>
+      <p style="font-size:1.1rem">y creemos juntos el regalo perfecto.</p>
+      <div class="big-phone"><i class="fab fa-whatsapp"></i> 973 696 566</div>
+      <p><i class="fas fa-map-marker-alt"></i> Envíos a todo Lima - Perú | Horario: Lun-Sáb 09am - 08pm</p>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <h3 style="color:var(--mahogany);margin-bottom:1rem">Déjanos tus datos</h3>
+          <form id="contactForm" action="https://formsubmit.co/aroma.tentacion.vinos@gmail.com" method="POST">
+            <div class="form-group"><input type="text" name="nombre" placeholder="Tu nombre" required></div>
+            <div class="form-group"><input type="email" name="email" placeholder="Correo electrónico" required></div>
+            <div class="form-group"><textarea name="mensaje" rows="3" placeholder="Cuéntanos qué regalo necesitas..." required></textarea></div>
+            <button type="submit" class="btn-primary" style="width:100%"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+            <input type="hidden" name="_next" value="#contacto">
+            <input type="hidden" name="_subject" value="¡Nuevo mensaje desde la web de Aroma y Tentación!">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
+          <p style="font-size:.85rem;margin-top:1rem;color:#666">📩 También escríbenos por WhatsApp para atención inmediata.</p>
+        </div>
+        <div class="contact-map">
+          <h3 style="color:var(--mahogany);margin-bottom:1rem">📍 Zona de cobertura</h3>
+          <iframe src="https://maps.google.com/maps?q=Lima%2C%20Per%C3%BA&t=&z=12&ie=UTF8&iwloc=&output=embed" title="Mapa de Lima" loading="lazy"></iframe>
+          <p style="margin-top:.8rem;font-size:.85rem;color:#666">Entregas en San Isidro, Miraflores, Surco, La Molina y más.</p>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/aroma_tent" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/Aroma%20y%20Tentaci%C3%B3n" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@aroma_tentacion" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/51973696566" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <a href="https://wa.me/51973696566?text=Quiero%20un%20regalo%20personalizado" class="btn-primary" style="background:#25D366;margin-top:10px"><i class="fab fa-whatsapp"></i> Escríbenos ahora</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p style="font-weight:600;color:var(--mahogany)">© <span id="year"></span> Aroma y Tentación — "Convierte un momento en algo inolvidable"</p>
+  <p style="font-size:.9rem;color:#555">Regalos personalizados, Vinos & Piscos</p>
+  <div class="footer-details">
+    <span><i class="fas fa-globe"></i> Envíos a todo Lima - Perú</span>
+    <span><i class="fas fa-mobile-alt"></i> 973 696 566</span>
+    <span><i class="far fa-envelope"></i> aroma.tentacion.vinos@gmail.com</span>
+    <span><i class="far fa-clock"></i> Lun-Sáb 09am a 08pm</span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({duration:800,once:false,offset:60});
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+      let t=document.querySelector(this.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+    });
+  });
+  const form=document.getElementById('contactForm');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      const btn=this.querySelector('button[type="submit"]');
+      const txt=btn.innerHTML;
+      btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      btn.disabled=true;
+      fetch(this.action,{method:'POST',body:new FormData(this),headers:{'Accept':'application/json'}})
+        .then(r=>{
+          if(r.ok){
+            this.innerHTML='<div style="text-align:center;padding:2rem"><div style="font-size:3rem">✅</div><h3 style="color:var(--mahogany);font-family:Agbalumo;margin:1rem 0">¡Mensaje enviado!</h3><p style="color:#555">Gracias por escribirnos. Nos pondremos en contacto contigo muy pronto 🍷</p><button onclick="location.reload()" class="btn-primary" style="margin-top:1.5rem"><i class="fas fa-redo"></i> Enviar otro mensaje</button></div>';
+          }else throw new Error('Error');
+        })
+        .catch(()=>{
+          btn.innerHTML=txt;
+          btn.disabled=false;
+          alert('⚠️ Hubo un problema. Escríbenos por WhatsApp al 973 696 566.');
+        });
+    });
+  }
+</script>
+</body>
+</html>
