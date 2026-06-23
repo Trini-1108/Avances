@@ -1,1 +1,1 @@
-Avances quue demuestro mis avances sobre python.
+AVANCES QUE SE HACE DE MANERA SEMANAL SOBRE MIS PROYECTOS.
